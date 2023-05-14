@@ -22,17 +22,17 @@
   const inputRenderer = defineComponent({
     name: 'input-renderer',
     data () {
-      const isEmail = this.control.uischema?.format === 'email';
-      let rules = [
-        (value) => !!value || 'This field is required.',
-        (value) => value.length > 1 || 'Minimum of 2 characters.'
+      const isEmail: boolean = this.control.uischema?.format === 'email';
+      let rules: Array<any> = [
+        (value: string) => !!value || 'This field is required.',
+        (value: string) => value.length > 1 || 'Minimum of 2 characters.'
       ];
       if (isEmail) {
         rules = [
           ...rules,
-          (value) => {
-          const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          return pattern.test(value) || 'Invalid e-mail.'
+          (value: string) => {
+            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            return pattern.test(value) || 'Invalid e-mail.'
           }
         ];
       }
