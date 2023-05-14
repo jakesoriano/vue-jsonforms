@@ -2,20 +2,16 @@
   "properties": {
     "firstName": {
       "type": "string",
-      "minLength": 2,
       "description": "Enter your first name"
     },
     "lastName": {
       "type": "string",
-      "minLength": 2,
       "description": "Enter your last name"
     },
     "birthDate": {
       "type": "string",
       "format": "date",
-      "description": "Enter your birth date",
-      "formatMinimum": "01-01-1901",
-      "formatMaximum": "today"
+      "description": "Enter your birth date"
     },
     "email": {
       "type": "string",
