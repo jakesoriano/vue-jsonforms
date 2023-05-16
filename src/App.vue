@@ -19,7 +19,6 @@ const renderers: Object = Object.freeze([
     <h1>Your Profile</h1>
     <div class="form">
       <JsonForms
-        :ajv="ajv"
         :renderers="renderers"
         :schema="schema"
         :uischema="uischema"
