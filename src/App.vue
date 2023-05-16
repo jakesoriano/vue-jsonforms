@@ -22,7 +22,6 @@ const renderers: Object = Object.freeze([
         :renderers="renderers"
         :schema="schema"
         :uischema="uischema"
-        @change="onChange"
       />
     </div>
     <button class="button">Next</button>
